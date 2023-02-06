@@ -1,0 +1,1267 @@
+:root{
+    --plava: rgb(230, 233, 253);
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-family: "Poppins", sans-serif;
+    -webkit-user-select:none;
+    -moz-user-select:-moz-none;
+    -ms-user-select:none;
+    user-select:none;
+    background-color:rgb(230, 233, 253);
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent;  
+}
+
+/* Inicijalni deo */
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    -webkit-animation: animacija_overlay 2s ease-in;
+            animation: animacija_overlay 2s ease-in; 
+}
+@-webkit-keyframes animacija_overlay {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+   
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+@keyframes animacija_overlay {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+   
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+.description{
+    color: white;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 1.2%;
+    text-align: center;
+}
+.large{
+    font-size: 2.7rem;
+    font-weight: bolder;
+    letter-spacing: 1.2px;
+    margin-top: 30vh;
+    -webkit-animation: large_text_animation 2s ease-in ;
+            animation: large_text_animation 2s ease-in ;
+    text-shadow: 4px 8px 12px black;
+}
+.medium{
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 1.2px;
+    color: rgb(209, 209, 209);
+    padding-left: 33%;
+    padding-right: 33%;
+    -webkit-animation: medium_text_animation 3s ease-out ;
+            animation: medium_text_animation 3s ease-out ;
+    text-shadow: 2px 4px 6px rgb(24, 24, 24);
+}
+@-webkit-keyframes large_text_animation {
+    0% {
+        margin-top: 10vh;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        margin-top: 30vh;
+        opacity: 1;
+    }
+}
+@keyframes large_text_animation {
+    0% {
+        margin-top: 10vh;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        margin-top: 30vh;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes medium_text_animation {
+    0% {
+        color: transparent;
+        opacity: 0;
+    }
+    40%{
+        color: transparent;
+        opacity: 0;
+    }
+    100% {
+        color:rgb(209, 209, 209);
+        opacity: 1;
+    }
+}
+@keyframes medium_text_animation {
+    0% {
+        color: transparent;
+        opacity: 0;
+    }
+    40%{
+        color: transparent;
+        opacity: 0;
+    }
+    100% {
+        color:rgb(209, 209, 209);
+        opacity: 1;
+    }
+}
+
+.arrow_div{
+    margin-top: 33vh;
+    width: 20px;
+    height: 20px;
+    background-image: url("assets/arrow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-animation: arrow_animation 1.2s infinite normal ease-out 2.5s;
+            animation: arrow_animation 1.2s infinite normal ease-out 2.5s;
+    opacity: 0;
+}
+@-webkit-keyframes arrow_animation {
+    0% {
+        opacity: 1;
+        margin-top: 33vh;
+    }
+    80% {
+        margin-top: 38vh;
+        opacity: 0;
+    }
+}
+@keyframes arrow_animation {
+    0% {
+        opacity: 1;
+        margin-top: 33vh;
+    }
+    80% {
+        margin-top: 38vh;
+        opacity: 0;
+    }
+}
+
+/* Pocetna */
+.meni{
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-animation: meni_animacija 0.6s normal ease-out;
+            animation: meni_animacija 0.6s normal ease-out;
+}
+@-webkit-keyframes meni_animacija {
+    0% {
+        opacity: 0;
+        margin-top: -5vh;
+    }
+    40%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0vh;
+    }
+}
+@keyframes meni_animacija {
+    0% {
+        opacity: 0;
+        margin-top: -5vh;
+    }
+    40%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0vh;
+    }
+}
+.logo{
+    width: 200px;
+    height: 50px;
+    background-image: url("assets/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 2%;
+    z-index: 2;
+}
+.menu_mobile{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-right: 7.5%;
+}
+.nav2{
+    display: none;
+}
+.nav li{
+    display: inline;
+    margin-right: 30px;
+    font-size: 1.3rem;
+    color: rgb(243, 243, 243);
+    letter-spacing: 0.5px;
+    text-shadow: 1px 4px 12px rgba(0, 0, 0, 0.815);
+}
+.nav li:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 8px 20px rgb(0, 0, 0);
+}
+.nav a{
+    text-decoration: none;
+}
+.nav a:hover{
+    text-decoration: none;
+}
+
+.pocetna{
+    width: 100%;
+    height: auto;
+}
+
+
+.content1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    padding-left: 2%;
+    padding-right: 7%;
+    box-sizing: border-box;
+}
+.content2{
+    flex-direction: row-reverse;
+    padding-right: 2%;
+    padding-left: 7%;
+    margin-top: 15%;
+}
+.slika_content1{
+    max-width: 50%;
+    width: 36%;
+    height: auto;
+    box-shadow: 0.1vw 0.1vw 1vw rgba(0, 0, 0, 0.568);
+}
+
+.tekst_content1{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.tekst_content1 span{
+    font-size: 1.2rem;
+}
+.margina_levo{
+    margin-left: 15vw;
+}
+.ponuda{
+    width: 70%;
+    height: auto;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prozivod_ponude{
+    width: 22%;
+    height: auto;
+    border-radius: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.25);
+ 
+    padding-bottom: 5%;
+}
+.krug_logo{
+    width: 3vw;
+    height: 3vw;
+    background-color: rgb(230, 233, 253);
+    margin-top: -1.5vw;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 6px rgb(151, 151, 151);
+}
+.akumulator{
+    background-size: 53%;
+    background-image: url("assets/akumulator_logo.png");
+}
+.gume{
+    background-size: 100%;
+    background-image: url("assets/guma.png");
+}
+.ulje{
+    background-size: 130%;
+    background-image: url("assets/ulje.png");
+    background-position-x: 45%;
+    background-position-y: 50%;
+}
+.delovi{
+    background-size: 75%;
+    background-image: url("assets/deo.png");
+    background-position-x: 62%;
+    background-position-y: 47%;
+}
+.kozmetika{
+    background-size: 70%;
+    background-image: url("assets/tree.png");
+    background-position-y: 20%;
+}
+.prozivod_ponude h3{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+    letter-spacing: 1px;
+    margin-top: 10%;
+}
+.prozivod_ponude span{
+    width: 70%;
+    font-size: 0.95rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.brendovi{
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(230, 233, 253, 0.438);
+    
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.brend{
+    width: 7%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.topla{
+    background-image: url("assets/topla.png");
+}
+.varta{
+    background-image: url("assets/Varta-Logo.svg.png");
+}
+.taxxon{
+    width: 7%;
+    margin-top: 1.5%;
+    background-image: url("assets/taxxon_logo.png");
+}
+.michelin{
+    background-image: url("assets/michelin.png");
+}
+.bosch{
+    background-image: url("assets/bosch.png");
+}
+.castrol{
+    background-image: url("assets/castrol.png");
+}
+.total{
+    width: 10%;
+    background-image: url("assets/total.png");
+}
+.febi{
+    width: 5%;
+    background-image: url("assets/febi.png");
+}
+.monbat{
+    background-image: url("assets/monbat.png");
+}
+
+.brend_footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(7, 4, 54);
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+.info_kontakt{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.kontakt{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.info span{
+    color: rgb(219, 219, 219);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 2%;
+}
+.footer hr{
+    width: 70%;
+    background-color: rgba(221, 221, 221, 0.192);
+    border-radius: 16px;
+    border: none;
+    height: 2px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.rights{
+    font-size: 1rem !important;
+    color: rgba(99, 99, 99, 0.432) !important;
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+.kontakt h3{
+    margin: 0;
+    color: rgb(219, 219, 219);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5vh !important;
+    font-weight: normal;
+}
+.kontakt input{
+    outline: none;
+    border-radius: 0.5vw;
+    border: none;
+    height: 40px;
+    width: 85%;
+    margin-bottom: 7%;
+    background-color: rgba(122, 122, 122, 0.1);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color:  rgb(219, 219, 219);
+    box-shadow: 0px 0px 8px rgba(10, 10, 10, 0.2);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+}
+.kontakt input::-webkit-input-placeholder{
+    font-style: italic;
+    font-size: 0.85rem;
+    font-family: "Poppins", sans-serif;
+}
+.kontakt input::-moz-placeholder{
+    font-style: italic;
+    font-size: 0.85rem;
+    font-family: "Poppins", sans-serif;
+}
+.kontakt input:-ms-input-placeholder{
+    font-style: italic;
+    font-size: 0.85rem;
+    font-family: "Poppins", sans-serif;
+}
+.kontakt input::-ms-input-placeholder{
+    font-style: italic;
+    font-size: 0.85rem;
+    font-family: "Poppins", sans-serif;
+}
+.kontakt input::placeholder{
+    font-style: italic;
+    font-size: 0.85rem;
+    font-family: "Poppins", sans-serif;
+}
+.kontakt textarea{
+    outline: none;
+    resize: none;
+    border-radius: 0.5vw;
+    border: none;
+    height: 75%;
+    width: 85%;
+    margin-bottom: 7%;
+    background-color: rgba(122, 122, 122, 0.1);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    color:  rgb(219, 219, 219);
+    font-size: 0.95rem;
+    box-shadow: 0px 0px 8px rgba(10, 10, 10, 0.2);
+    font-family: "Poppins", sans-serif;
+}
+.kontakt textarea::-webkit-input-placeholder{
+    font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+}
+.kontakt textarea::-moz-placeholder{
+    font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+}
+.kontakt textarea:-ms-input-placeholder{
+    font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+}
+.kontakt textarea::-ms-input-placeholder{
+    font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+}
+.kontakt textarea::placeholder{
+    font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+}
+.kontakt button{
+    background-color: rgb(43, 0, 236);
+    height: 50px;
+    width: 50%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: none;
+    cursor: pointer;
+    color: rgb(219, 219, 219);
+    letter-spacing: 1.2px;
+    font-size: 0.85rem;
+    font-family: "Poppins", sans-serif;
+}
+.kontakt button:hover{
+    background-color:  rgb(47, 3, 243);
+    
+}
+
+.radno_vreme{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.dani{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-right: 20%;
+    font-weight: normal;
+}
+.vreme{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: right;
+   
+}
+.vreme span{
+    letter-spacing: 1.5px !important;
+}
+
+@media screen and (max-width:1600px){
+.slika_content1{
+    max-width: 50%;
+}
+.tekst_content1{
+    width: 35%;
+}
+}
+
+@media screen and (max-width:1500px){
+html{
+    font-size: 13px !important;
+}
+}
+
+@media screen and (max-width:1400px){
+html{
+    font-size: 12px !important;
+}
+
+.slika_content1{
+    max-width: 50%;
+    width: 60%;
+}
+.tekst_content1{
+    width: 35%;
+}
+
+.nav li{
+    
+}
+.arrow_div{
+    width: 18px;
+    height: 18px;
+}
+.kontakt{
+    width: 40%;
+}
+}
+
+
+@media screen and (max-width:1300px){
+html{
+    font-size: 11px !important;
+}
+.slika_content1{
+    max-width: 50%;
+    width: unset;
+}
+.tekst_content1 span{
+   
+}
+.kontakt{
+    width: 50%;
+}
+.kontakt button{
+    width: 40%;
+    height: 45px;
+}
+.description{
+    padding-left: 18%;
+    padding-right: 18%;
+}
+.large{
+    font-size: 3rem;
+}
+.medium{
+    font-size: 1.3rem;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.arrow_div{
+    width: 16px;
+    height: 16px;
+}
+
+.ponuda{
+    width: 80%;
+}
+.prozivod_ponude{
+    width: 25%;
+}
+.krug_logo{
+    width: 4vw;
+    height: 4vw;
+    background-color: rgb(230, 233, 253);
+    margin-top: -2vw;
+}
+.nav li{
+    font-size: 14px;
+}
+.kontakt input{
+    height: 35px;
+}
+}
+
+@media screen and (max-width:1000px){
+html{
+    font-size: 10px;
+}
+.logo{
+    width: 160px;
+    height: 45px;
+    margin-left: 1%;
+}
+
+.slika_content1{
+    max-width: 55%;
+    width: 50%;
+}
+.tekst_content1{
+    width: 40%;
+}
+
+.kontakt{
+    width: 45%;
+}
+.kontakt input{
+    height: 30px;
+}
+.kontakt button{
+    width: 50%;
+    height: 40px;
+}
+.info_kontakt{
+    width: 70%;
+}
+}
+
+@media screen and (max-width:900px){
+html{
+    font-size: 9px;
+}
+.content1{
+    padding-left: 0%;
+    padding-right: 3%;
+}
+.slika_content1{
+    max-width: 60%;
+    width: 60%;
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.tekst_content1 span{
+   
+}
+.brendovi{
+    width: 100%;
+    height: 10vh;
+}
+.description{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.large{
+   
+}
+.medium{
+   
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.nav li{
+   
+}
+
+}
+
+@media screen and (max-width:800px){
+html{
+    font-size: 8px;
+}
+}
+
+@media screen and (max-width:900px){
+html{
+    font-size: 14px;
+}
+
+
+.content1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.content2{
+    flex-direction: column;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+.slika_content1{
+    max-width: 80%;
+    height: auto;
+    box-shadow: 0.25vw 0.4vw 3.5vw rgba(0, 0, 0, 0.568);
+}
+.tekst_content1{
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 12px;
+}
+.krug_logo{
+    width: 5vw;
+    height: 5vw;
+    margin-top: -2.5vw;
+}
+.ponuda{
+    width: 100%;
+}
+.prozivod_ponude{
+    width: 25%;
+}
+
+
+}
+
+@media screen and (max-width:700px){
+html{
+    font-size: 14px;
+}
+.nav{
+    display: none;
+}
+.menu_mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 35px;
+    margin-right: 5%;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    z-index: 3;
+}
+.menu_btn{
+    width: 36px;
+    height: 4px;
+    z-index: 2;
+    transition: all .5s ease-in-out;
+    background: rgb(230, 230, 230);
+    border-radius: 6px;
+}
+.menu_btn::before,
+.menu_btn::after{
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 4px;
+    background: rgb(241, 241, 241);
+    transition: all .5s ease-in-out;
+    border-radius: 6px;
+}
+.menu_btn::before{
+    transform: translateY(-10px);
+}
+.menu_btn::after{
+    transform: translateY(10px);
+}
+.menu_mobile.open .menu_btn{
+    transform: translateX(-40px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu_mobile.open .menu_btn::before{
+    transform:  rotate(45deg) translate(25px, -25px);
+}
+.menu_mobile.open .menu_btn::after{
+    transform:  rotate(-45deg) translate(25px, 25px);
+}
+.nav ul{
+    display: none;
+}
+.nav2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(11, 20, 100);
+    z-index: -3;
+    visibility: hidden;
+}
+.nav2 ul{
+    height: 100%;
+    min-height: 50%;
+    padding-left: 0;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+.nav2 li{
+    display: block;
+    color: rgb(243, 243, 243);
+    letter-spacing: 1px;
+    text-shadow: 1px 4px 12px rgba(0, 0, 0, 0.815);
+    background-color: transparent;
+    font-size: 2rem;
+}
+.nav2 li:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 8px 20px rgb(0, 0, 0);
+}
+.nav2 a{
+    text-decoration: none;
+}
+.nav2 a:hover{
+    text-decoration: none;
+}
+.description{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.large{
+    text-shadow: 1px 2px 8px black;
+    font-size: 2.3rem;
+}
+.medium{
+    margin-top: 1.5vh;
+    padding-left: 18%;
+    padding-right: 18%;
+    font-size: 0.85rem;
+}
+.arrow_div{
+    width: 12px;
+    height: 12px;
+}
+.content1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.content2{
+    flex-direction: column;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+.slika_content1{
+    max-width: 80%;
+    height: auto;
+    box-shadow: 0.25vw 0.4vw 3.5vw rgba(0, 0, 0, 0.568);
+}
+.tekst_content1{
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+}
+.tekst_content1 span{
+    
+}
+.ponuda{
+    width: 100%;
+    height: auto;
+    margin-top: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-top: 10%;
+    transition: none !important;
+}
+.prozivod_ponude{
+    width: 55%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.4);
+    animation: none !important;
+    margin-top: 20%;
+    padding-bottom: 20%;
+}
+.krug_logo{
+    width: 10vw;
+    height: 10vw;
+    background-color: rgb(230, 233, 253);
+    margin-top: -5vw;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 6px rgb(151, 151, 151);
+}
+.prozivod_ponude h3{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+    letter-spacing: 1px;
+    margin-top: 10%;
+}
+.prozivod_ponude span{
+    width: 70%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.ponuda2{
+    margin-top: 0% !important;
+}
+.brendovi{
+    width: 100%;
+    height: 30vh;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    margin-top: 30%;
+    margin-bottom: 5%;
+}
+.brend{
+    width: 26%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.info_kontakt{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.info{
+    width: 90%;
+    align-items: center;
+}
+.kontakt{
+    width: 80%;
+    align-items: center;
+}
+.info span{
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    margin-bottom: 0.7vh;
+}
+.kontakt h3{
+    color: rgb(238, 238, 238);
+    margin-bottom: 5% !important;
+    margin-top: 15%;
+}
+.kontakt input{
+    border-radius: 8px;
+    height: 45px;
+    width: 100%;
+    margin-bottom: 6%;
+    padding-left: 6%;
+    padding-right: 5%;
+    color:  rgb(219, 219, 219);
+    box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.2);
+}
+.kontakt input::-webkit-input-placeholder{
+}
+.kontakt input::-moz-placeholder{
+}
+.kontakt input:-ms-input-placeholder{
+}
+.kontakt input::-ms-input-placeholder{
+}
+.kontakt input::placeholder{
+}
+.kontakt textarea{
+    border-radius: 8px;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 5%;
+    padding-left: 6%;
+    padding-right: 5%;
+    padding-top: 4%;
+    box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.2);
+}
+.kontakt textarea::-webkit-input-placeholder{
+}
+.kontakt textarea::-moz-placeholder{
+}
+.kontakt textarea:-ms-input-placeholder{
+}
+.kontakt textarea::-ms-input-placeholder{
+}
+.kontakt textarea::placeholder{
+}
+.kontakt button{
+    background-color: rgb(43, 0, 236);
+    height: 50px;
+    width: 40%;
+    border-radius: 8px;
+    color: rgb(219, 219, 219);
+}
+.rights{
+}
+.taxxon{
+   margin-top: 8%;
+}
+.castrol{
+    background-size: 90%;
+}
+.total{
+    background-size: 56%;
+}
+.radno_vreme{
+    width: 65%;
+}
+.vreme{
+    width: 70%;
+}
+}
+
+@media only screen and (max-width:600px){
+.prozivod_ponude h3{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+    letter-spacing: 1px;
+    margin-top: 10%;
+}
+.prozivod_ponude span{
+    width: 70%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+}
+
+@media only screen and (max-width:500px){
+html{
+    font-size: 12px;
+}
+.logo{
+    width: 150px;
+    height: 40px;
+}
+
+.kontakt input{
+    height: 35px;
+}
+.kontakt button{
+    height: 45px;
+    width: 50%;
+}
+.nav2 ul{
+    padding-top: 35%;
+    padding-bottom: 35%;
+}
+.nav2 li{
+    font-size: 1.8rem;
+}
+}
+
+@media only screen and (max-width:450px){
+.prozivod_ponude h3{
+    font-size: 1.4rem;
+}
+.prozivod_ponude span{
+    font-size: 1rem;
+}
+}
+
+@media only screen and (max-width:400px){
+html{
+    font-size: 11px;
+}
+.logo{
+    width: 100px;
+    height: 35px;
+}
+.kontakt button{
+    height: 40px;
+}
+.nav2 ul{
+    padding-top: 35%;
+    padding-bottom: 35%;
+}
+.nav2 li{
+    font-size: 1.8rem;
+}
+}
+
+@media only screen and (max-width:350px){
+html{
+    font-size: 9px !important;
+}
+.febi{
+    background-size: 50%;
+}
+.total{
+    background-size: 120%;
+}
+.taxxon{
+   margin-top: 10%;
+}
+.kontakt input{
+    border-radius: 8px;
+    height: 30px;
+}
+.kontakt button{
+    height: 35px;
+}
+.nav2 ul{
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+.nav2 li{
+    font-size: 2.2rem;
+}
+}
+
+@media only screen and (max-width:250px){
+html{
+    font-size: 7px !important;
+}
+.nav2 li{
+    font-size: 2.5rem;
+}
+}
+
+
+

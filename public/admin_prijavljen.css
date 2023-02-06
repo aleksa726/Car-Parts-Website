@@ -1,0 +1,222 @@
+.poruke_upiti{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.div_odeljka{
+    width: 40%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.div_odeljka h3{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    color: white;
+    letter-spacing: 1.2px;
+}
+.div_upita{
+    background-color: rgba(245, 245, 245, 0.85);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 0%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.733);
+    word-wrap: break-word;
+}
+.div_upita:hover{
+    background-color: rgba(245, 245, 245, 0.95);
+   
+    box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.9);
+}
+.div_upita span{
+    margin-bottom: 1vh;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(22, 22, 22);
+}
+.datum{
+    font-size: 14px !important;
+    margin-top: 1.5vh;
+    font-style: italic;
+    font-weight: normal !important;
+    color: rgb(32, 32, 32);
+}
+
+.div_podnaslov{
+    margin-top: 15vh;
+    margin-bottom: -10vh;
+}
+.podnaslov{
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-style: italic;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.nav{
+    position: absolute;
+    right: 0;
+}
+.pozadina{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background-image: url("assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+.overlay{
+    z-index: -1 !important;
+    -webkit-animation-duration: 0.75s !important;
+            animation-duration: 0.75s !important;
+}
+.div_pregleda_upita{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    padding-bottom: 10vh;
+}
+.pregled_upita{
+    width: 30%;
+    background-color: rgba(245, 245, 245, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    border-radius: 12px;
+}
+.polje{
+    font-size: 15px;
+    margin-bottom: 0.5vh;
+    font-style: italic;
+}
+.podatak{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 2.5vh;
+    letter-spacing: 0.5px;
+    margin-left: 0.4vw;
+    word-wrap: break-word;
+}
+.poruka{
+    font-size: 18px !important;
+}
+.pregled_upita button{
+    background-color: rgb(43, 0, 236);
+    height: 60px;
+    width: 150px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: rgb(219, 219, 219);
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.pregled_upita button:hover{
+    background-color: rgb(52, 7, 255);
+}
+.link{
+    width: 50%;
+    text-decoration: none;
+    margin-bottom: 1.5vh;
+}
+
+@media screen and (max-width:1300px){
+.link{
+    width: 60%;
+}
+}
+
+
+@media screen and (max-width:1150px){
+.pregled_upita{
+    width: 60%;
+}
+}
+
+@media screen and (max-width:900px){
+.poruke_upiti{
+    width: 100%;
+}
+.div_odeljka{
+    width: 50%
+}
+.link{
+    width: 80%;
+}
+}
+
+@media screen and (max-width:700px){
+.pregled_upita{
+    width: 60%;
+}
+.polje{
+    font-size: 12px;
+}
+.podatak{
+    font-size: 16px;
+}
+.poruka{
+    font-size: 14px !important;
+}
+.pregled_upita button{
+    font-size: 12px;
+    height: 50px;
+    width: 120px;
+}
+}
+
+@media screen and (max-width:500px){
+.pregled_upita{
+    width: 80%;
+}
+}
+
+@media screen and (max-width:700px){
+
+.polje{
+    font-size: 10px;
+   
+}
+.podatak{
+    font-size: 14px;
+    
+}
+.poruka{
+    font-size: 12px !important;
+}
+.pregled_upita button{
+    font-size: 10px;
+
+}
+}

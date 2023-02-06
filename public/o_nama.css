@@ -1,0 +1,174 @@
+html{
+    font-size: 14px;
+}
+
+.pozadina_onama{
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(#3416bb,  rgb(230, 233, 252));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pozadina_onama h1{
+    margin-top: 5vh;
+    color: rgb(241, 241, 241);
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 4px 12px rgba(0, 0, 0, 0.75);
+    -webkit-animation: nalov_animacija 1s normal ease-in-out;
+            animation: nalov_animacija 1s normal ease-in-out;
+}
+@-webkit-keyframes nalov_animacija {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes nalov_animacija {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.onama_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.tekst2{
+    width: 60%;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: -8vh;
+    margin-bottom: -10vh;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.slike{
+    max-width: 50%;
+    width: 36%;
+    height: auto;
+    box-shadow: 0.1vw 0.1vw 0.7vw rgba(0, 0, 0, 0.5);
+    background-image: url("assets/spolja.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.div_slika{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    padding: 0 !important;
+    width: 65%;
+    height: 40vh;
+    margin-top: 10%;
+    margin-bottom: -5%;
+}
+.div_tekst_onama{
+    width: 60%;
+    align-items: center;
+    text-align: center;
+}
+.slika1{
+    background-image: url("assets/slika1.jpg") !important;
+}
+.slika2{
+    background-image: url("assets/slika2.jpg") !important;
+}
+.slika3{
+    background-image: url("assets/slika3.jpg") !important;
+}
+.slika4{
+    background-image: url("assets/slika4.jpg") !important;
+}
+
+@media screen and (max-width:1300px){
+.slike{
+    width: 45%;
+}
+}
+
+@media screen and (max-width:1150px){
+html{
+    font-size: 11px;
+}
+.tekst2{
+    width: 70%;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: -15vh;
+    margin-bottom: -5vh;
+}
+.div_slika{
+    width: 75%;
+    height: 35vh;
+}
+.slike{
+    width: 40%;
+}
+}
+
+
+@media screen and (max-width:900px){
+html{
+    font-size: 10px;
+}
+.div_slika{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    margin-top: 5vh;
+}
+.slike{
+    max-width: 70% ;
+    width: 100%;
+    height: 45% ;
+    margin-top: 5vh ;
+}
+}
+
+@media screen and (max-width:700px){
+html{
+    font-size: 13px;
+}
+.tekst2{
+    width: 70%;
+    font-size: 1.25rem;
+    margin-top: -10vh;
+    margin-bottom: 0vh;
+}
+.slike{
+    max-width: 80% ;
+}
+}
+
+@media screen and (max-width:500px){
+.div_slika{
+    height: 80vh !important;
+}
+}
+
+@media screen and (max-width:350px){
+.div_slika{
+    height: 65vh !important;
+}
+}
